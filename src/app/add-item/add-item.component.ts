@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AddItemComponent {
 
+  image=""
+  title=""
+  description=""
+  price=""
+  sellerName=""
+  Quantity=""
+
+  readValues=()=>
+  {
+    let data:any= {"title":this.title,"price":this.price,"description":this.description,"image":this.image,"sellerName":this.sellerName,"Quantity":this.Quantity}
+    console.log(data)
+  }
+
+
 }
