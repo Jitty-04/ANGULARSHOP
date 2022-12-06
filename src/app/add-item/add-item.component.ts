@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-item',
@@ -7,18 +8,47 @@ import { Component } from '@angular/core';
 })
 export class AddItemComponent {
 
-  image=""
-  title=""
-  description=""
+  productcode=""
+  productname=""
+  mandate=""
+  expdate=""
+  brand=""
   price=""
-  sellerName=""
-  Quantity=""
+  sellername=""
+  distributername=""
+  constructor(private api:ApiService){
 
+  }
   readValues=()=>
   {
-    let data:any= {"title":this.title,"price":this.price,"description":this.description,"image":this.image,"sellerName":this.sellerName,"Quantity":this.Quantity}
-    console.log(data)
+    let data:any= {"productcode":this.productcode,"productname":this.productname,"mandate":this.mandate,"expdate":this.expdate,"brand":this.brand,"price":this.price,"sellername":this.sellername,"distributername":this.distributername}
+  console.log(data)
+  this.api.addProduct(data).subscribe(
+    (response:any)=>
+    {
+      console.log(response)
+      if (response.status=="success") {
+        alert("product added successfully")
+       
+        this.productcode=""
+        this.productname=""
+        this.mandate=""
+        this.expdate=""
+        this.brand=""
+        this.price=""
+        this.sellername=""
+        this.distributername=""
+        
+      } else {
+        alert("something went wrong")
+      }
+    }
+  )
   }
-
-
 }
+
+
+  
+
+
+
