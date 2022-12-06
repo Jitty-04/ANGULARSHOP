@@ -3,29 +3,38 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
+                
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Image</label>
-                    <input name=" image" [(ngModel)]=" image" type="file" name="" id="">
+                    <label for="" class="form-label">ProductCode</label>
+                    <input name="productcode" [(ngModel)]="productcode" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Title</label>
-                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Description</label>
-                    <textarea name=" description" [(ngModel)]=" description" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <label for="" class="form-label">ProductName</label>
+                    <input name="productname" [(ngModel)]="productname" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Rate</label>
-                    <input name="price" [(ngModel)]="price" type="number" class="form-control">
+                    <label for="" class="form-label">Manufacture date</label>
+                    <input name="mandate" [(ngModel)]="mandate" type="date" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Seller Name</label>
-                    <input name="sellerName" [(ngModel)]="sellerName" type="text" class="form-control">
+                    <label for="" class="form-label">Expire date</label>
+                    <input name="expdate" [(ngModel)]="expdate" type="date" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Quantity</label>
-                    <input name=" Quantity" [(ngModel)]=" Quantity" type="text" class="form-control">
+                    <label for="" class="form-label">Brand</label>
+                    <input name="brand" [(ngModel)]="brand" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Price</label>
+                    <input name="price" [(ngModel)]="price" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Sellername</label>
+                    <input name="sellername" [(ngModel)]="sellername" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">DistributerName</label>
+                    <input name="distributername" [(ngModel)]="distributername" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button (click)="readValues()" class="btn btn-success">Add Product</button>
